@@ -18,7 +18,7 @@ ORDER BY month;
 monthly_sales = pd.read_sql_query(monthly_sales_query, conn)
 
 # Query 2: Top 10 Best-Selling Products
-top_products_query = """
+top_products_query = """ 
 SELECT p.product_category_name, COUNT(oi.product_id) AS total_sold
 FROM order_items oi
 JOIN products p ON oi.product_id = p.product_id
